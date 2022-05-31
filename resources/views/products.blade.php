@@ -5,6 +5,10 @@
 
 @section('content')
 
-    <h1>Essa é a página de contato!</h1>
-    <a href="/">Voltar para a home</a>   
+    <h1>Tela de Produtos</h1>
+
+    @if($busca)
+        <p>O usuário está buscando {{ $busca }}</p>
+    @endif
+
 @endsection

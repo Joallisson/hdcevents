@@ -19,7 +19,7 @@ Route::get('/', function () {
     $arr = [1, 2, 3];
     $nomes = ['ana', 'carlos', 'pedro'];
 
-    return view('welcome', 
+    return view('welcome',
     [
         'nome' => $nome,
         'arr' => $arr,
@@ -27,6 +27,17 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/produtos', function () {
+
+    $busca = request('search');
+
+    return view('products', ['busca' => $busca]);
+});
+
 Route::get('/products', function () {
     return view('products');
+});
+
+Route::get('/produtos_teste/{id?}', function ($id = null) {
+    return view('product', ['id' => $id]);
 });
