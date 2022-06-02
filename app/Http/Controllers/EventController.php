@@ -3,21 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
 
 class EventController extends Controller
 {
     public function index() {
 
-        $nome = "pedro";
-        $arr = [1, 2, 3];
-        $nomes = ['ana', 'carlos', 'pedro'];
+        $events = Event::all(); //pega todos os registros do db
 
-        return view('welcome',
-        [
-            'nome' => $nome,
-            'arr' => $arr,
-            'nomes' => $nomes
-        ]);
+        return view('welcome', ['events' => $events]);
     }
 
     public function create(){

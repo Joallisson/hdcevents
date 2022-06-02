@@ -8,4 +8,4 @@
         <p>Exibindo produto id: {{ $id }}</p>
     @endif
 
-@endsection
+@endsection 
