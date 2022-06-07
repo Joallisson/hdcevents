@@ -34,6 +34,7 @@ class EventController extends Controller
 
             $requestImage->move(public_path('img/events'), $imageName);
             $event->image = $imageName;
+
         }
 
         $event->save();
