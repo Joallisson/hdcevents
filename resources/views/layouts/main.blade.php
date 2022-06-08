@@ -27,6 +27,8 @@
                         <img src="/img/hdcevents_logo.svg" alt="HDC Events">
                     </a>
 
+                    <?php echo ("Teste"); ?>
+
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="/" class="nav-link">Eventos</a>
